@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>马浩杰-南京大学-元戎启行-VLM.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+ <center>
+     <h1>马浩杰</h1>
+     <div>
+         <span>
+             <img src="assets/phone-solid.svg" width="18px">
+             18151681382
+         </span>
+         ·
+         <span>
+             <img src="assets/envelope-solid.svg" width="18px">
+             1137633684@qq.com
+         </span>
+     </div>
+ </center>
+<h2 id="img-src%22assetsinfo-circle-solidsvg%22-width%2230px%22-%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF"><img src="assets/info-circle-solid.svg" width="30px"> 个人信息</h2>
+<p>男，1994 年出生                                求职意向：算法工程师                               工作经验：约5年</p>
+<p>技能清单: 3D目标检测，强化学习(DQN, PPO, GRPO, GSPO)，VLM，LLM微调和蒸馏，c++, cuda.</p>
+<h2 id="img-src%22assetsgraduation-cap-solidsvg%22-width%2230px%22-%E6%95%99%E8%82%B2%E7%BB%8F%E5%8E%86"><img src="assets/graduation-cap-solid.svg" width="30px"> 教育经历</h2>
+<ul>
+<li>
+<p>硕士，南京大学，计算机科学与技术专业，2017.9~2020.7</p>
+</li>
+<li>
+<p>学士，南京大学，计算机科学与技术专业，2013.9~2017.7</p>
+</li>
+</ul>
+<h2 id="img-src%22assetsbriefcase-solidsvg%22-width%2230px%22-%E5%B7%A5%E4%BD%9C%E7%BB%8F%E5%8E%86"><img src="assets/briefcase-solid.svg" width="30px"> 工作经历</h2>
+<ul>
+<li><strong>元戎启行，perception 算法工程师, 2023.2~2026.1</strong></li>
+<li><strong>小马智行，perception 算法工程师, 2021.8~2022.10</strong></li>
+<li><strong>微软中国 公司，m365 部门，SDE, 2020.6~2021.7</strong></li>
+</ul>
+<h2 id="img-src%22assetsproject-diagram-solidsvg%22-width%2230px%22-%E7%A7%91%E7%A0%94%E7%BB%8F%E5%8E%86%E6%80%BB%E5%BC%95%E7%94%A8%E9%87%8F350"><img src="assets/project-diagram-solid.svg" width="30px"> 科研经历(总引用量350+)</h2>
+<ul>
+<li>AttnSense: Multi-level Attention Mechanism For Multimodal Human Activity Recognition (<strong>Ijcai 2019, CCF A</strong>, attention多模态融合)</li>
+<li>Unsupervised Human Activity Representation Learning with Multi-task Deep Clustering (<strong>UbiComp 2020, CCF A</strong>, 无监督预训练相关)</li>
+</ul>
+<h2 id="img-src%22assetstools-solidsvg%22-width%2230px%22-%E9%A1%B9%E7%9B%AE%E7%BB%8F%E5%8E%86"><img src="assets/tools-solid.svg" width="30px"> 项目经历</h2>
+<h3 id="%E9%A1%B9%E7%9B%AE%E4%B8%80-%E5%9F%BA%E4%BA%8Evla%E6%9E%B6%E6%9E%84%E7%9A%84%E7%AB%AF%E5%88%B0%E7%AB%AF%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%85%83%E6%88%8E%E5%90%AF%E8%A1%8C"><strong>项目一: 基于VLA架构的端到端自动驾驶大模型(元戎启行)</strong></h3>
+<ul>
+<li>项目背景：构建统一的多模态自动驾驶大模型，旨在实现从感知理解到决策规划的端到端闭环
+构建具备场景理解，轨迹输出，风险评估能力的统一模型</li>
+<li>技术细节：
+<ul>
+<li>模型整体架构
+<ul>
+<li>基座模型采用Qwen2-VL 7B架构，整体参数量8B，精度为FP8.</li>
+<li>输入为BEV特征,导航地图，感知地图等多模态信息，输出为场景描述、轨迹规划、限速信息、纵横向规划、风险标志, 引入COT输出设计，要求模型在生成轨迹前先输出场景语义描述与意图预测</li>
+</ul>
+</li>
+<li>预训练
+<ul>
+<li>构建了异构数据混合训练，将通用视觉-语言数据集与自动驾驶数据集（大规模BEV-描述对）进行混合训练</li>
+<li>未来考虑结合Masked World Modeling (MWM) 思想，让模型在未标注的海量路测视频中学习物理规律，提高模型的空间感知能力。</li>
+</ul>
+</li>
+<li>后训练：采用SFT监督微调和GRPO强化学习训练，通过多维度奖励函数优化模型在博弈场景下的表现。奖励函数包括：
+<ul>
+<li>格式奖励：验证输出结构的完整性（场景描述、轨迹、限速、风险标志等标签）</li>
+<li>场景标签奖励：评估场景理解准确性（多标签分类）</li>
+<li>轨迹奖励：评估参考线轨迹生成质量（与ground truth的匹配度）</li>
+<li>速度奖励：评估速度token预测准确性</li>
+<li>风险标志奖励：评估安全决策能力（F0.5分数评估）</li>
+<li>多样性奖励：促进模型在corner case场景下的适应性</li>
+</ul>
+</li>
+<li>数据方面:
+<ul>
+<li>车端部署VLM蒸馏模型用作场景分类，进行corner case采集,包含异形障碍物，极端道路结构(窄路，环岛)，交互博弈（强行加塞, 无保护左转）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>交付指标：
+<ul>
+<li>复杂城市场景下的接管里程（MPI）提升 40%。</li>
+<li>典型 Corner Case（如无保护左转）的成功率从 75% 提升至 92%。</li>
+</ul>
+</li>
+<li>当前问题
+<ul>
+<li>模型泛化能力不够，过拟合明显</li>
+<li>轨迹输出不合理，下游仍旧需要大量规则进行兜底</li>
+</ul>
+</li>
+</ul>
+<h3 id="%E9%A1%B9%E7%9B%AE%E4%BA%8C-3d%E6%84%9F%E7%9F%A5%E4%B8%8Eocc%E6%84%9F%E7%9F%A5%E5%85%83%E6%88%8E%E5%90%AF%E8%A1%8C"><strong>项目二: 3D感知与OCC感知(元戎启行)</strong></h3>
+<ul>
+<li>QueryTracker
+<ul>
+<li>项目背景：使用基于神经网络的tracker替代原先的基于规则的tracker</li>
+<li>采用了类似于TrackFormer和TransCenter的思想，基于query的Transformer架构
+<ul>
+<li>使用Instance Bank存储object历史轨迹,是QueryTracker实现稳定长期跟踪的关键，解决了目标遮挡、短暂消失等问题，确保跟踪的连续性和稳定性。</li>
+<li>模型输入当前BEV特征，历史的BEV特征，bbox, 置信度，时间间隔，位姿等信息，通过self attention和cross attention直接输出追踪后的3D障碍物</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>3D occ
+<ul>
+<li>项目背景：基于3D感知的OCC识别，用于识别不同类型的占用物（水马、围栏、锥桶等）</li>
+<li>模型架构：
+<ul>
+<li>全卷积的head，用于做3D分割，判断是否占据, 占据物体类别等信息</li>
+<li>针对雨花误检问题，增加noise类别预测</li>
+<li>fusion occ探索, 单LIDAR occ遇到了瓶颈，结合图像数据上线了fusion occ.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="%E9%A1%B9%E7%9B%AE%E4%B8%89%E7%82%B9%E4%BA%91%E6%A3%80%E6%B5%8B%E5%92%8C%E5%88%86%E5%89%B2%E5%B0%8F%E9%A9%AC%E6%99%BA%E8%A1%8C"><strong>项目三：点云检测和分割(小马智行)</strong></h3>
+<ul>
+<li>项目描述： 复现并优化 Waymo 顶刊论文 Range Sparse Net (RSN)，构建一套兼顾 Range View (RV) 语义分割与 BEV 目标检测的端到端感知框架。</li>
+<li>模型架构:
+<ul>
+<li>在RV视角使用U-Net进行3D语义分割(类似occ)，识别噪点，地面点，背景点，行人车辆等信息，损失函数使用Focal Loss + Lovász-Softmax Loss</li>
+<li>目标检测在BEV视角进行，模型架构采用Sparse CNN + SSD/CenterPoint Head, 损失函数采用多任务损失，包含分类损失(focal loss), 回归损失(l1 loss), Direction Loss：专门用于处理朝向角的周期性问题</li>
+<li>稀疏卷积网络输入为经过 Range View 分割过滤后的点云，背景点已被去除，输入的具体形式为非零点的空间坐标 $(x, y, z)$, 稀疏卷积通过cuda实现，具体机制为结合哈希表和Rule Book(卷积核输出点对应的输入坐标),有了 Rule Book，计算过程就变成了矩阵乘法（GEMM），这让稀疏卷积在 GPU 上的执行速度飞快</li>
+</ul>
+</li>
+</ul>
+<h3 id="%E9%A1%B9%E7%9B%AE%E5%9B%9B-%E5%9F%BA%E4%BA%8E-scope-%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90%E7%9A%84%E6%95%B0%E6%8D%AE%E8%A1%80%E7%BC%98%E7%B3%BB%E7%BB%9F%E5%BE%AE%E8%BD%AF"><strong>项目四: 基于 SCOPE 静态分析的数据血缘系统(微软)</strong></h3>
+<ul>
+<li>项目描述：开发了一套针对微软大数据特有语言 SCOPE 的静态解析引擎，通过构建全链路数据血缘图谱，解决 Cosmos 平台数据冗余及资产溯源难题</li>
+<li>核心贡献：
+<ul>
+<li>编译级 Parser 开发：基于编译原理，自主实现了一套针对 SCOPE 语法的解析器（Parser），通过解析 抽象语法树 (AST) 提取数据表、视图及 UDF 之间的依赖关系。</li>
+<li>大规模血缘图谱构建：处理并关联 Cosmos 平台内 PB 级数据的生产与消费记录，实现了表级与字段级（Column-level）的血缘追踪。</li>
+</ul>
+</li>
+<li>业务价值：
+<ul>
+<li>成本优化：基于血缘关系识别并清理了长达 180 天无下游调用的“冷数据”和冗余副本，直接为部门节省了约 12% 的存储开销。</li>
+<li>安全合规：为敏感数据提供了清晰的溯源路径，满足了内部数据合规与影响分析的需求(欧盟GDPR法案)</li>
+</ul>
+</li>
+</ul>
+<h3 id="%E9%A1%B9%E7%9B%AE%E4%BA%94-%E5%9F%BA%E4%BA%8Eazure-ml%E7%9A%84%E9%9B%86%E7%BE%A4%E7%9B%91%E6%8E%A7%E7%B3%BB%E7%BB%9F"><strong>项目五: 基于Azure ML的集群监控系统</strong></h3>
+<ul>
+<li>项目描述：针对微软内部超大规模计算集群 Cosmos，搭建了一套从异常监测到自动化运维的闭环系统，旨在降低集群宕机风险并提升任务作业的稳定性。</li>
+<li>核心贡献：
+<ul>
+<li>多维指标监控：集成 Cosmos 服务器底层硬件（CPU、磁盘 I/O、网络丢包）与系统级故障日志，构建了高维时序特征库。</li>
+<li>异常检测架构：接入 Azure Time Series Anomaly Detection 服务，利用其内置的 SR-CNN (Spectral Residual-CNN) 算法，实现了对非平稳时序数据的实时监控。相较于传统阈值告警，漏报率降低了 18%</li>
+</ul>
+</li>
+</ul>
+
+</body>
+</html>
