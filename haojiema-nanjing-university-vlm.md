@@ -28,8 +28,8 @@ Skills: 3D Object Detection, Reinforcement Learning (DQN, PPO, GRPO, GSPO), VLM,
 - Bachelor, Nanjing University, Computer Science and Technology, 2013.9~2017.7
 
 ## <img src="assets/briefcase-solid.svg" width="30px"> Work Experience
-- **DeepRoute, Perception Algorithm Engineer, 2023.2~2026.1**
-- **Pony.ai, Perception Algorithm Engineer, 2021.8~2022.10**
+- **DeepRoute, Perception Algorithm Engineer, 2023.1~Now**
+- **Pony.ai, Perception Algorithm Engineer, 2021.8~2022.12**
 - **Microsoft China, m365 Department, SDE, 2020.6~2021.7**
 
 ## <img src="assets/project-diagram-solid.svg" width="30px"> Research Experience (Total Citations 350+)

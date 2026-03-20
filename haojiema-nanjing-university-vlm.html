@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>haojiema-nanjing-university-vlm.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="ma-haojie">Ma Haojie</h1>
+<div align="center">
+    <h1>Ma Haojie</h1>
+    <div>
+        <span>
+            <img src="assets/phone-solid.svg" width="18px">
+            18151681382
+        </span>
+        ·
+        <span>
+            <img src="assets/envelope-solid.svg" width="18px">
+            1137633684@qq.com
+        </span>
+    </div>
+</div>
+<h2 id="img-src%22assetsinfo-circle-solidsvg%22-width%2230px%22-personal-information"><img src="assets/info-circle-solid.svg" width="30px"> Personal Information</h2>
+<p>Male, Born in 1994                           Position: Algorithm Engineer                           Work Experience: ~5 years</p>
+<p>Skills: 3D Object Detection, Reinforcement Learning (DQN, PPO, GRPO, GSPO), VLM, LLM fine-tuning and distillation, c++, cuda.</p>
+<h2 id="img-src%22assetsgraduation-cap-solidsvg%22-width%2230px%22-education"><img src="assets/graduation-cap-solid.svg" width="30px"> Education</h2>
+<ul>
+<li>
+<p>Master, Nanjing University, Computer Science and Technology, 2017.9~2020.7</p>
+</li>
+<li>
+<p>Bachelor, Nanjing University, Computer Science and Technology, 2013.9~2017.7</p>
+</li>
+</ul>
+<h2 id="img-src%22assetsbriefcase-solidsvg%22-width%2230px%22-work-experience"><img src="assets/briefcase-solid.svg" width="30px"> Work Experience</h2>
+<ul>
+<li><strong>DeepRoute, Perception Algorithm Engineer, 2023.1~Now</strong></li>
+<li><strong>Pony.ai, Perception Algorithm Engineer, 2021.8~2022.12</strong></li>
+<li><strong>Microsoft China, m365 Department, SDE, 2020.6~2021.7</strong></li>
+</ul>
+<h2 id="img-src%22assetsproject-diagram-solidsvg%22-width%2230px%22-research-experience-total-citations-350"><img src="assets/project-diagram-solid.svg" width="30px"> Research Experience (Total Citations 350+)</h2>
+<ul>
+<li>AttnSense: Multi-level Attention Mechanism For Multimodal Human Activity Recognition (<strong>Ijcai 2019, CCF A</strong>, attention-based multimodal fusion)</li>
+<li>Unsupervised Human Activity Representation Learning with Multi-task Deep Clustering (<strong>UbiComp 2020, CCF A</strong>, unsupervised pre-training related)</li>
+</ul>
+<h2 id="img-src%22assetstools-solidsvg%22-width%2230px%22-project-experience"><img src="assets/tools-solid.svg" width="30px"> Project Experience</h2>
+<h3 id="project-1-end-to-end-autonomous-driving-large-model-based-on-vla-architecture-deeproute"><strong>Project 1: End-to-End Autonomous Driving Large Model Based on VLA Architecture (DeepRoute)</strong></h3>
+<ul>
+<li>Project Background: Build a unified multimodal autonomous driving large model, aiming to achieve an end-to-end closed loop from perception understanding to decision planning. Construct a unified model with scene understanding, trajectory output, and risk assessment capabilities.</li>
+<li>Technical Details:
+<ul>
+<li>Model Architecture
+<ul>
+<li>Base model adopts Qwen2-VL 7B architecture, overall parameter count is 8B, precision is FP8.</li>
+<li>Input includes multimodal information such as BEV features, navigation maps, perception maps, etc., outputs include scene descriptions, trajectory planning, speed limit information, longitudinal/lateral planning, risk flags. Introduces COT output design, requiring the model to first output scene semantic descriptions and intent predictions before generating trajectories.</li>
+</ul>
+</li>
+<li>Pretraining
+<ul>
+<li>Built heterogeneous data mixed training, mixing general visual-language datasets with autonomous driving datasets (large-scale BEV-description pairs) for joint training.</li>
+<li>Future consideration of combining Masked World Modeling (MWM) concepts to allow the model to learn physical laws from unannotated massive road test videos, improving the model's spatial perception capability.</li>
+</ul>
+</li>
+<li>Post-training: Adopted SFT supervised fine-tuning and GRPO reinforcement learning training, optimizing model performance in game scenarios through multi-dimensional reward functions. Reward functions include:
+<ul>
+<li>Format Reward: Verify the completeness of output structure (scene description, trajectory, speed limit, risk flag labels, etc.)</li>
+<li>Scene Label Reward: Assess scene understanding accuracy (multi-label classification)</li>
+<li>Trajectory Reward: Evaluate reference line trajectory generation quality (matching degree with ground truth)</li>
+<li>Speed Reward: Assess speed token prediction accuracy</li>
+<li>Risk Flag Reward: Assess safety decision-making capability (F0.5 score evaluation)</li>
+<li>Diversity Reward: Promote model adaptability in corner case scenarios</li>
+</ul>
+</li>
+<li>Data Aspect:
+<ul>
+<li>Deployed VLM distillation model on vehicle for scene classification, performing corner case collection, including irregular obstacles, extreme road structures (narrow roads, roundabouts), interactive gaming (forced lane cutting, unprotected left turns).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Delivery Metrics:
+<ul>
+<li>Improved complex urban scenario disengagement distance (MPI) by 40%.</li>
+<li>Increased success rate for typical Corner Cases (such as unprotected left turns) from 75% to 92%.</li>
+</ul>
+</li>
+<li>Current Issues
+<ul>
+<li>Model generalization capability is insufficient with obvious overfitting</li>
+<li>Trajectory output is unreasonable, still requiring significant rule-based fallback downstream</li>
+</ul>
+</li>
+</ul>
+<h3 id="project-2-3d-perception-and-occ-perception-deeproute"><strong>Project 2: 3D Perception and OCC Perception (DeepRoute)</strong></h3>
+<ul>
+<li>QueryTracker
+<ul>
+<li>Project Background: Use neural network-based tracker to replace the original rule-based tracker</li>
+<li>Adopted ideas similar to TrackFormer and TransCenter, based on query Transformer architecture
+<ul>
+<li>Used Instance Bank to store object historical trajectories, which is key to QueryTracker achieving stable long-term tracking, solving problems like target occlusion, brief disappearance, etc., ensuring tracking continuity and stability.</li>
+<li>Model inputs current BEV features, historical BEV features, bbox, confidence, time intervals, pose and other information, directly outputs tracked 3D obstacles through self-attention and cross-attention</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>3D OCC
+<ul>
+<li>Project Background: OCC recognition based on 3D perception, used to identify different types of occupancy objects (water barriers, fences, cones, etc.)</li>
+<li>Model Architecture:
+<ul>
+<li>Fully convolutional head, used for 3D segmentation, judging whether occupied, occupied object categories and other information</li>
+<li>Addressed rain false detection issues by adding noise class prediction</li>
+<li>Explored fusion OCC, single LIDAR OCC encountered bottlenecks, combined image data to implement fusion OCC.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="project-3-point-cloud-detection-and-segmentation-ponyai"><strong>Project 3: Point Cloud Detection and Segmentation (Pony.ai)</strong></h3>
+<ul>
+<li>Project Description: Reproduced and optimized the top-tier paper Range Sparse Net (RSN) from Waymo, building an end-to-end perception framework that balances Range View (RV) semantic segmentation and BEV object detection.</li>
+<li>Model Architecture:
+<ul>
+<li>Performed 3D semantic segmentation (similar to OCC) using U-Net in RV view, identifying noise, ground points, background points, pedestrians, vehicles and other information, with loss function using Focal Loss + Lovász-Softmax Loss</li>
+<li>Object detection was performed in BEV view, with model architecture adopting Sparse CNN + SSD/CenterPoint Head, loss function using multitask loss containing classification loss (focal loss), regression loss (l1 loss), Direction Loss: specifically designed to handle periodicity issues with orientation angles</li>
+<li>Sparse convolution network input was point cloud filtered after Range View segmentation, with background points removed. The specific input format was spatial coordinates $(x, y, z)$ of non-zero points. Sparse convolution was implemented via cuda, with the specific mechanism combining hash tables and Rule Book (input coordinates corresponding to convolution kernel output points). With the Rule Book, the calculation process becomes matrix multiplication (GEMM), making sparse convolution extremely fast on GPUs</li>
+</ul>
+</li>
+</ul>
+<h3 id="project-4-data-lineage-system-based-on-scope-static-analysis-microsoft"><strong>Project 4: Data Lineage System Based on SCOPE Static Analysis (Microsoft)</strong></h3>
+<ul>
+<li>Project Description: Developed a static parsing engine targeting Microsoft's proprietary big data language SCOPE, solving data redundancy and asset tracing challenges on the Cosmos platform by constructing full-link data lineage graphs.</li>
+<li>Key Contributions:
+<ul>
+<li>Compiler-Level Parser Development: Based on compiler principles, independently implemented a parser for SCOPE syntax, extracting dependencies between data tables, views and UDFs by parsing Abstract Syntax Trees (AST).</li>
+<li>Large-Scale Lineage Graph Construction: Processed and associated production and consumption records of PB-level data within the Cosmos platform, achieving table-level and field-level (Column-level) lineage tracking.</li>
+</ul>
+</li>
+<li>Business Value:
+<ul>
+<li>Cost Optimization: Identified and cleaned &quot;cold data&quot; and redundant copies without downstream calls for 180 days based on lineage relationships, directly saving approximately 12% of storage costs for the department.</li>
+<li>Security Compliance: Provided clear traceability paths for sensitive data, meeting internal data compliance and impact analysis requirements (EU GDPR).</li>
+</ul>
+</li>
+</ul>
+<h3 id="project-5-cluster-monitoring-system-based-on-azure-ml-microsoft"><strong>Project 5: Cluster Monitoring System Based on Azure ML (Microsoft)</strong></h3>
+<ul>
+<li>Project Description: For Microsoft's ultra-large-scale computing cluster Cosmos, built a closed-loop system from anomaly monitoring to automated operations and maintenance, aimed at reducing cluster downtime risks and improving job stability.</li>
+<li>Key Contributions:
+<ul>
+<li>Multi-dimensional Metrics Monitoring: Integrated underlying hardware (CPU, disk I/O, network packet loss) and system-level fault logs of Cosmos servers, constructing a high-dimensional time-series feature database.</li>
+<li>Anomaly Detection Architecture: Connected to Azure Time Series Anomaly Detection service, utilizing its built-in SR-CNN (Spectral Residual-CNN) algorithm to achieve real-time monitoring of non-stationary time series data. Compared to traditional threshold alerts, the false negative rate decreased by 18%.</li>
+</ul>
+</li>
+</ul>
+
+</body>
+</html>
